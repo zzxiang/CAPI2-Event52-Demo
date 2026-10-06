@@ -1,0 +1,1 @@
+dotnet run --project .\Client\Capi2Event52Client.csproj
