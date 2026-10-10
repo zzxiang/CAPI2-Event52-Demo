@@ -28,3 +28,11 @@ The .NET version was checked with the following PowerShell command.
 ```PowerShell
 dotnet --version
 ```
+
+## Running the Server
+
+Run the C# server project with:
+
+```powershell
+dotnet run --project .\Server\Server.csproj
+```
