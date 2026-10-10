@@ -41,7 +41,7 @@ try
 
         Console.WriteLine($"[{request.HttpMethod}] Request received from {request.RemoteEndPoint}");
 
-        var body = "<html><body><h1>Hello from C# HTTPS Server!</h1></body></html>";
+        var body = "<html><body><h1>Hello from the Simple Server!</h1></body></html>";
         var buffer = Encoding.UTF8.GetBytes(body);
         response.ContentLength64 = buffer.Length;
         response.ContentType = "text/html";
