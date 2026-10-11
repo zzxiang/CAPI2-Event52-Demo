@@ -4,11 +4,13 @@ using System.Diagnostics;
 
 using var handler = new HttpClientHandler
 {
-    SslProtocols = SslProtocols.Tls12,
-    ServerCertificateCustomValidationCallback = (request, _, _, sslErrors) => true
+    ServerCertificateCustomValidationCallback = (request, _, _, sslErrors) => true,
 };
 
-using var client = new HttpClient(handler);
+using var client = new HttpClient(handler)
+{
+    Timeout = TimeSpan.FromSeconds(5),
+};
 var stopwatch = Stopwatch.StartNew();
 using var response = await client.GetAsync("https://localhost:8443/");
 stopwatch.Stop();

@@ -29,10 +29,11 @@ The .NET version was checked with the following PowerShell command.
 dotnet --version
 ```
 
-## Running the Server
+## How to Use the Scripts
 
-Run the C# server project with:
+Run the # server with [Launch-Server.ps1](Launch-Server.ps1).
 
-```powershell
-dotnet run --project .\Server\Server.csproj
-```
+## Check the Outbound Rules of Windoes Firewall
+
+1. Press `Windows Key + R`, type `wf.msc`, and press **Enter** to open Windows Defender Firewall with Advanced Security.
+2. Click on **Outbound Rules** in the left-hand column to view all active rules.
