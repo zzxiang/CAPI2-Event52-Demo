@@ -1,0 +1,1 @@
+dotnet run --project .\Client48\Client48.csproj

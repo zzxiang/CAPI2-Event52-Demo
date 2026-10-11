@@ -33,6 +33,9 @@ dotnet --version
 
 Run the # server with [Launch-Server.ps1](Launch-Server.ps1).
 
+Run the .NET 10 client with `dotnet run --project .\Client\Client.csproj`, or the
+.NET Framework 4.8 client with `dotnet run --project .\Client48\Client48.csproj`.
+
 ## Check the Outbound Rules of Windoes Firewall
 
 1. Press `Windows Key + R`, type `wf.msc`, and press **Enter** to open Windows Defender Firewall with Advanced Security.
