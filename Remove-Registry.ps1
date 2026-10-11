@@ -5,6 +5,7 @@ if (Test-Path -LiteralPath $registryPath) {
     foreach ($valueName in 'EncodedCtl', 'LastSyncTime') {
         if ($registryValues.PSObject.Properties.Name -contains $valueName) {
             Remove-ItemProperty -LiteralPath $registryPath -Name $valueName -ErrorAction Stop
+            Write-Host "Removed registry value: $registryPath\$valueName"
         }
     }
 }
