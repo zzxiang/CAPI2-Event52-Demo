@@ -18,15 +18,16 @@ try
 {
     using var response = await client.GetAsync("https://localhost:8443/");
     Console.WriteLine($"Client received response at {DateTimeOffset.Now:O}");
-    stopwatch.Stop();
     response.EnsureSuccessStatusCode();
 
     Console.WriteLine(await response.Content.ReadAsStringAsync());
-    Console.WriteLine($"Server response time: {stopwatch.Elapsed.TotalMilliseconds:F2} ms");
 }
 catch (Exception exception)
 {
-    stopwatch.Stop();
     Console.WriteLine($"Client received exception at {DateTimeOffset.Now:O}: {exception.GetType().Name}: {exception.Message}");
-    throw;
+}
+finally
+{
+    stopwatch.Stop();
+    Console.WriteLine($"Client elapsed time: {stopwatch.Elapsed.TotalMilliseconds:F2} ms");
 }
