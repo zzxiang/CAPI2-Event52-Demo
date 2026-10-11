@@ -43,7 +43,7 @@ Run the .NET 10 client with `dotnet run --project .\Client\Client.csproj`, or th
 
 ## The Group Policy related to Certificate Retrieval
 
-1. Turn off Automatic Root Certificates Update
+### Turn off Automatic Root Certificates Update
 
 Group Policy path
 
@@ -61,7 +61,7 @@ Set to Enabled to disable automatic root-certificate updates.
 This stops that particular update mechanism,
 but does not disable all chain-building network retrieval.
 
-1. Allow issuer certificate (AIA) retrieval during path validation
+### Allow issuer certificate (AIA) retrieval during path validation
 
 Group Policy path
 
