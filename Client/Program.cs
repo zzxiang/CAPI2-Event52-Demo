@@ -1,5 +1,3 @@
-using System.Net.Security;
-using System.Security.Authentication;
 using System.Diagnostics;
 
 using var handler = new HttpClientHandler
