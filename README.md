@@ -40,3 +40,41 @@ Run the .NET 10 client with `dotnet run --project .\Client\Client.csproj`, or th
 
 1. Press `Windows Key + R`, type `wf.msc`, and press **Enter** to open Windows Defender Firewall with Advanced Security.
 2. Click on **Outbound Rules** in the left-hand column to view all active rules.
+
+## The Group Policy related to Certificate Retrieval
+
+1. Turn off Automatic Root Certificates Update
+
+Group Policy path
+
+```plain
+Computer Configuration →
+Administrative Templates →
+System →
+Internet Communication Management →
+Internet Communication Settings
+```
+
+Policy: Turn off Automatic Root Certificates Update
+
+Set to Enabled to disable automatic root-certificate updates.
+This stops that particular update mechanism,
+but does not disable all chain-building network retrieval.
+
+1. Allow issuer certificate (AIA) retrieval during path validation
+
+Group Policy path
+
+```plain
+Computer Configuration →
+Windows Settings →
+Security Settings →
+Public Key Policies →
+Certificate Path Validation Settings →
+Network Retrieval
+```
+
+This is a checkbox rather than a standalone On/Off policy.
+Select Define these policy settings,
+then clear Allow issuer certificate (AIA) retrieval during path validation
+to prevent downloading missing intermediate certificates through AIA.
