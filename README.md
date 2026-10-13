@@ -33,12 +33,16 @@ dotnet --version
 
 Run the # server with [Launch-Server.ps1](Launch-Server.ps1).
 
-Run the .NET 10 client with `dotnet run --project .\Client\Client.csproj`, or the
-.NET Framework 4.8 client with `dotnet run --project .\Client48\Client48.csproj`.
+Run the .NET 10 client with [Launch-Client.ps1](Launch-Client.ps1),
+or the .NET Framework 4.8 client with [Launch-Client48.ps1](Launch-Client48.ps1).
+
+The .NET Framework 4.8 client enables verbose network tracing.
+It writes its network trace to `network.log` in the same directory of `Client48.exe`.
 
 ## Check the Outbound Rules of Windoes Firewall
 
-1. Press `Windows Key + R`, type `wf.msc`, and press **Enter** to open Windows Defender Firewall with Advanced Security.
+1. Press `Windows Key + R`, type `wf.msc`,
+   and press **Enter** to open Windows Defender Firewall with Advanced Security.
 2. Click on **Outbound Rules** in the left-hand column to view all active rules.
 
 ## The Group Policy related to Certificate Retrieval
