@@ -4,7 +4,7 @@ This repository was created to reproduce and investigate a strange system behavi
 It shows how to trigger a CAPI2 "Retrieve Object from Network" (Event ID 52 and the following 53)
 log on Windows.
 
-## A Strange Behavior of Our System: the Reason I Created This Repository
+## A Strange Behavior of Our System
 
 When our team deployed a server/client system to a new production enviornment,
 we observed a strange behavior: the HTTPS request sent from the client to the server often timeout,
